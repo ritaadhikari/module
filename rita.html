@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .myBtn{
+            background-color: yellow;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+        }
+        .myBtn:hover{
+            border: 1px solid #888;
+            background-color: #ddd;
+        } 
+        </style>
+    
+</head>
+
+<body>
+    
+    <input id = "Name" placeholder="Enter your Name"><br>
+    <input id = "Address" placeholder="Enter ur Address"><br>
+    <input id = "school" placeholder="Enter your College"><br>
+    <input id = "fathersname" placeholder="Enter your mother name"><br>
+    <input id = "mothersname" placeholder="Enter your father name"><br>
+    <button class = "myBtn"title="click me" onclick="showInfo()">Submit</button>
+         <script>
+        const showInfo =function(){
+                const name = document.getElementById('Name').value
+               const output = document.createElement('h1');
+                const College = document.getElementById("school").value  
+                const Address = document.getElementById("fathersname").value  
+                const Phone = document.getElementById("Phone no").value  
+                const Email = document.getElementById("mothersname").value  
+            output.innerHTML = `${name} College is ${College}`;
+            document.body.append(output)            
+        }
+        </script>
+</body>
+</html>
